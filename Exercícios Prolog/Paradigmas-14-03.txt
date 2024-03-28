@@ -1,0 +1,51 @@
+%fatos
+mortal(homem).
+mortal(gato).
+mortal(cachorro).
+
+homem(Socrates).
+
+
+%regras
+%todo homem é mortal
+%todos que estão na tabela homem são mortais
+homem(X).
+
+
+
+
+
+
+
+BACKUP AULA
+%podemos fazer tabelas de duas colunas
+%ao criar a tabela eu crio um padrao, nesse caso o gerou está na primeira coluna e o filho na segunda coluna
+
+
+%ao perguntar quem é o gerou de cain, usamos a sintaxe: gerou(X,abel). e ele retorna, atribuindo o nome à variável X (X = adão)
+%tambem posso perguntar quem é filho de adão
+
+%gerou(X,_). lista os pais
+
+% , é o E
+% ; é o OU
+% :- é o SE
+
+%FATOS
+gerou(adão,cain).
+gerou(adão,abel).
+gerou(adão,seth).
+gerou(seth,enos).
+gerou(seth,judite).
+gerou(abel,sara).
+gerou(abel,mara).
+gerou(cain,marta).
+gerou(sara,elen).
+
+
+%REGRAS	
+%essa regra verifica se X e Y são irmãos
+irmao(X,Y):-gerou(Z,X),gerou(Z,Y).
+
+%essa regra verifica se X é tio de Y
+tio(X,Y):-gerou(Z,Y),irmao(X,Z).

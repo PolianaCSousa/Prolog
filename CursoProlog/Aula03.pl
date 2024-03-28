@@ -63,3 +63,30 @@ capital(X,Estado):-sudeste(Estado,X).
 % 5 ?- capital(belo_horizonte,Estado).
 % Estado = minas_gerais.
 %
+
+
+
+/* ------------------------------- EXERCÍCIO 3 -------------------------------- */
+
+/* Elabore um programa pra determinar quais tipos sanguíneos podem doar/receber sangue de quais tipos. A tabela seguinte fornece a informação
+necessária para a implementação. Depois faça consultas para saber se um tipo pode doar para outro tipo, e se um tipo pode receber de outro
+tipo.*/
+
+doa(a,a).
+doa(a,ab).
+doa(b,b).
+doa(b,ab).
+doa(ab,ab).
+doa(o,a).
+doa(o,b).
+doa(o,ab).
+doa(o,o).
+recebe(a,a).
+recebe(a,o).
+recebe(b,b).
+recebe(b,o).
+recebe(ab,a).
+recebe(ab,b).
+recebe(ab,ab).
+recebe(ab,o).
+recebe(o,o).

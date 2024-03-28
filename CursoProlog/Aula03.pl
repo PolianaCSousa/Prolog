@@ -31,4 +31,35 @@ membros(X,Y):-frequenta(X,Y);funcionario(X,Y).
 %  associados(Pessoa,Faculdade):-alunos_associados(Pessoa,Faculdade);professores_associados(Pessoa,Faculdade).
 %
 
+
+
 /* ------------------------------- EXERCÍCIO 2 -------------------------------- */
+
+/* Elabore um programa Prolog que forneça o nome da capital de qualquer estado da região sudeste. */
+
+%base de dados
+sudeste(minas_gerais,belo_horizonte).
+sudeste(sao_paulo,sao_paulo).
+sudeste(rio_de_janeiro,rio_de_janeiro).
+sudeste(espirito_santo,vitoria).
+
+%regra que diz se X é capital de Estado
+capital(X,Estado):-sudeste(Estado,X).
+
+%
+% Algumas consultas que posso fazer:
+% 3 ?- sudeste(Capitais,_).
+% Capitais = minas_gerais ;
+% Capitais = sao_paulo ;
+% Capitais = rio_de_janeiro ;
+% Capitais = espirito_santo.
+% 
+% 3 ?- capital(X,minas_gerais).
+% X = belo_horizonte.
+% 
+% 4 ?- capital(X,sao_paulo).    
+% X = sao_paulo.
+% 
+% 5 ?- capital(belo_horizonte,Estado).
+% Estado = minas_gerais.
+%

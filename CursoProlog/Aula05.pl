@@ -32,10 +32,20 @@
  */
 
 
- /*O operador is é um operador de atribuição.
+ /* OPERADOR IS
+
+  O operador is é um operador de atribuição.
   Ao usar o is, as variáveis à direita dele devem possuir um valor, caso contrário o Prolog retorna um erro.
+
 */
+
 soma(A, B, S) :- S is A + B.
 % além de realizar a soma, eu posso verificar se uma soma está correta:
 % ?- soma(10,20,30).
 % true.
+
+
+/* ------------------------------- EXERCÍCIO 1 -------------------------------- */
+/* Crie uma regra em Prolog que peça no console um número inteiro e imprima na tela se o número é maior que 100 ou se é menor ou igual a 100 */
+
+%write('Informe um número inteiro'),nl.

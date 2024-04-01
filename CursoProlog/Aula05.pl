@@ -48,4 +48,15 @@ soma(A, B, S) :- S is A + B.
 /* ------------------------------- EXERCÍCIO 1 -------------------------------- */
 /* Crie uma regra em Prolog que peça no console um número inteiro e imprima na tela se o número é maior que 100 ou se é menor ou igual a 100 */
 
-%write('Informe um número inteiro'),nl.
+
+%O Prolog vai amarrar o texto na variável Resultado somente se a condição para Num for atendida.
+verifica(Num,'O numero informado e maior que 100.') :- Num > 100, !.
+verifica(Num, 'O numero informado e menor que 100.') :- Num < 100, !.
+verifica(Num, 'Voce informou o numero 100.') :- Num =:= 100.
+
+
+start :- 
+  write('Informe um numero inteiro: '),
+  read(Num),
+  verifica(Num, Resultado), 
+  write(Resultado).

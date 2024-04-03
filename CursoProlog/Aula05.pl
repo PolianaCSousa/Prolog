@@ -61,6 +61,13 @@ start :-
   verifica(Num, Resultado), 
   write(Resultado).
 
+/*
+  CÓDIGO DO BRUNO
+  maiorQueCem() :- write('Entre com o número:'),
+                   read(X),
+                   ((X > 100, write('O número é maior que cem')), (X =< 100, write('O número é menor ou igual a cem'))).
+*/
+
   /* ------------------------------- EXERCÍCIO 2 -------------------------------- */
   /* Dados os fatos a seguir, e considerando que 7.0 a 10.0 é APROVADO, 5.0 e 6.9 é RECUPERAÇÃO e 0.0 a 4.9 é REPROVADO, escreva uma regra para identificar a situação de um determinado aluno. */
 nota(joao,5.0).
@@ -85,3 +92,7 @@ startNotas :-
   situacao(Aluno,Situacao),
   write(Situacao).
 
+/*
+  CÓDIGO BRUNO
+  diario(X) :- nota(X,Nota), ((Nota >= 7, Nota =< 10, write('Aprovado')),(Nota >= 5, Nota < 6.9, write('Recuperação')),(Nota >= 0, Nota =< 4.9, write('Reprovado'))).
+*/

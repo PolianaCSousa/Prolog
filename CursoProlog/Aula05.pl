@@ -96,3 +96,8 @@ startNotas :-
   CÓDIGO BRUNO
   diario(X) :- nota(X,Nota), ((Nota >= 7, Nota =< 10, write('Aprovado')),(Nota >= 5, Nota < 6.9, write('Recuperação')),(Nota >= 0, Nota =< 4.9, write('Reprovado'))).
 */
+
+
+/* CALCULANDO IMC */
+imc(Peso,Altura) :- X is Peso/(Altura * Altura),
+                    write('Seu imc e: '), write(X).

@@ -60,3 +60,28 @@ start :-
   read(Num),
   verifica(Num, Resultado), 
   write(Resultado).
+
+  /* ------------------------------- EXERCÍCIO 2 -------------------------------- */
+  /* Dados os fatos a seguir, e considerando que 7.0 a 10.0 é APROVADO, 5.0 e 6.9 é RECUPERAÇÃO e 0.0 a 4.9 é REPROVADO, escreva uma regra para identificar a situação de um determinado aluno. */
+nota(joao,5.0).
+nota(mariana,9.0).
+nota(joaquim,4.5).
+nota(maria,6.0).
+nota(cleuza,8.5).
+nota(mara,4.0).
+nota(joana,8.0).
+nota(jose,6.5).
+nota(mary,10.0).
+
+
+situacao(Aluno,'Situacao: O aluno foi APROVADO!') :- nota(Aluno,Nota), Nota >= 7.0.
+situacao(Aluno,'Situacao: O aluno esta de RECUPERACAO!') :- nota(Aluno,Nota), Nota >= 5.0, Nota =< 6.9.
+situacao(Aluno,'Situacao: O aluno foi REPROVADO!') :- nota(Aluno, Nota), Nota =< 4.9.
+
+startNotas :-
+  write('BEM VINDO! Informe abaixo o nome do aluno que deseja saber a situacao na disciplina.'), nl,
+  write('Nome do aluno: '),
+  read(Aluno),
+  situacao(Aluno,Situacao),
+  write(Situacao).
+

@@ -1,0 +1,13 @@
+
+
+for(i=1; i<=k i++)
+{
+  j = contador[i];
+
+  while(j > 0)
+  {
+    saida[i] = i
+    j = j-1;
+    i = i+1;
+  }
+}

@@ -1,3 +1,7 @@
+%   AULA DO DIA 02/04 (terça feira)   %
+
+
+
 /* 
   PROBLEMA DA MOCHILA
 

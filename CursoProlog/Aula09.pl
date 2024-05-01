@@ -19,3 +19,6 @@ last(X,[_|T]) :- last(X,T).
 %caso base (os dois primeiros elementos da lista são X e Y).
 consec(X,Y,[X,Y|_]).
 consec(X,Y,[_|T]) :- consec(X,Y,T).
+
+%Implementando o problema que verifica o tamanho da lista dada
+%caso base (se a lista for vazia, o tamanho é zero)

@@ -65,22 +65,35 @@ duplica2(H, [H,H|X]) :- !.*/
 
 %código de maior progresso:
 
-duplica([],[]).
+/*duplica([],[]).
 duplica([H|T],X) :- duplica(T,Aux),
                     duplica2(H,[H,H|Aux]),
-                    
+                    X = Aux.
 
-duplica2(H, [H,H|_]) :- !.
+duplica2(H, [H,H|_]) :- !.*/
 
 %---------------------------------------------------------
 %progredindo um pouco mais. ANTES DE TERMINAR, RODAR ELE NA MÃO
 
+%Depois de rodar na mao, o codigo ficou da seguinte forma, e progredi um poquinho mais...
+
+/*duplica([],[]).
+duplica([H|T],X) :- duplica(T,Aux),
+                    duplica2(H,[H,H|Aux],Aux2),
+                    X = Aux2.
+
+duplica2(H, _, [H,H]) :- !.*/
+
+%---------------------------------------------------------
+
+%CONSEGUI :D - Esse código funciona.
+
 duplica([],[]).
 duplica([H|T],X) :- duplica(T,Aux),
-                    duplica2(H,[H,H|Aux]),
-                    X = Aux. %ele unificou, mas unificou com Aux que é  []...
+                    duplica2(H,[H,H|Aux],Aux2),
+                    X = Aux2. 
 
-duplica2(H, [H,H|_]) :- !.
+duplica2(_, Dupli, Dupli) :- !.
 
 
 

@@ -88,6 +88,7 @@ duplica2(H, _, [H,H]) :- !.*/
 
 %CONSEGUI :D - Esse código funciona.
 
+%caso base (uma lista vazia duplicada é uma lista vazia)
 duplica([],[]).
 duplica([H|T],X) :- duplica(T,Aux),
                     duplica2(H,[H,H|Aux],Aux2),

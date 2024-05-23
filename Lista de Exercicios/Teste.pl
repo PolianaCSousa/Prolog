@@ -13,3 +13,24 @@ Por exemplo, se Aux é [1,2,3] e H é 4, então [H|Aux] será [4,1,2,3]. Ou seja
 %CORRIGIR -> add_cauda(Lista,[Lista|0]).
 
 /*Para inserir um elemento na cauda da lista, é um pouco diferente. Eu preciso percorrer toda a lista e encontrar o ultimo elemento dela, e ai adicionar o novo elemento na cauda*/
+
+%ADICIONANDO ELEMENTOS NO FIM DA LISTA
+%caso base: em uma lista vazia, o elemento adicionado no fim da lista, é o primeiro elemento da lista
+
+%--------------------------------------------------------
+
+/*add_cauda(X,[],[X]).
+add_cauda(X,L1,L2) :- percorre_L1(X,L1,L2Aux).
+
+percorre_L1(X,[],Aux) :- unificaCauda(X,T,[X]).
+percorre_L1(X,[H|T],L2) :- percorre_L1(X,T,Aux).
+
+unificaCauda(_,Cauda,Cauda).*/
+
+%--------------------------------------------------------
+
+add_cauda(X,[],[X]).
+add_cauda(X,L1,L2) :- percorre_L1(X,L1,L2Aux).
+
+percorre_L1(X,[Y],Aux).
+percorre_L1(X,[H|T],L2) :- percorre_L1(X,T,Aux).

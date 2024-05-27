@@ -28,9 +28,26 @@ percorre_L1(X,[H|T],L2) :- percorre_L1(X,T,Aux).
 unificaCauda(_,Cauda,Cauda).*/
 
 %--------------------------------------------------------
+%esse código nao fa muita coisa, apenas percorre a lista até chegar no ultimo elemento.
 
-add_cauda(X,[],[X]).
+/*add_cauda(X,[],[X]).
 add_cauda(X,L1,L2) :- percorre_L1(X,L1,L2Aux).
 
 percorre_L1(X,[Y],Aux).
 percorre_L1(X,[H|T],L2) :- percorre_L1(X,T,Aux).
+*/
+
+%--------------------------------------------------------
+%vou tentar trabalhar com a propria lista
+
+/*add_cauda(X,[],[X]).
+add_cauda(X,[Y],_).
+add_cauda(X,[H|T],L2) :- add_cauda(X,T,_).
+*/
+
+%--------------------------------------------------------
+%vou pedir ajuda o GPT
+
+%caso base: em uma lista vazia, o elemento adicionado no fim da lista, é o primeiro elemento da lista (ACERTEI ATÉ AQUI)
+add_cauda(X,[],[X]).
+add_cauda(X,[H|T],[H|L2]) :- add_cauda(X,T,L2).

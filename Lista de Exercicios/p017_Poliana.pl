@@ -65,7 +65,8 @@ split([H|T],Tam,L1,L2) :- Aux is Tam - 1,
 
 %---------------------------------------------------------
 
+%FUNCIONOU :) Usei os conceitos que aprendi no código de inserir um elemento no fim da lista
 %caso base
-split(Cauda,1,[Elemento_no_indice_informado],Cauda).
-split([H|T],Tam,L1,L2) :- Aux is Tam - 1,
+split(Cauda,1,[],Cauda).
+split([H|T],Tam,[H|L1],L2) :- Aux is Tam - 1,
                           split(T,Aux,L1,L2).

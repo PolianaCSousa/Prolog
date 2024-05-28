@@ -49,3 +49,23 @@ unificaL2(Uni,Uni) :- !.
 
 %---------------------------------------------------------
 
+%TENTANDO UMA NOVA ABORDAGEM
+%vou tentar dividir a lista da seguinte forma: percorrer até o "índice" informado pelo usuário, e a cauda que restar já unifico com L2, e L1 eu construo na volta da recursão.
+
+%sintaxe: split(Lista,Tam,Lista1,Lista2).
+
+%NESSE CÓDIGO JÁ ESTOU CONSEGUINDO A SEGUNDA LISTA. AGORA FALTA CONTRUIR A PRIMEIRA
+
+/*
+%caso base
+split(Cauda,1,[Elemento_no_indice_informado],Cauda).
+split([H|T],Tam,L1,L2) :- Aux is Tam - 1,
+                          split(T,Aux,L1,L2).
+*/
+
+%---------------------------------------------------------
+
+%caso base
+split(Cauda,1,[Elemento_no_indice_informado],Cauda).
+split([H|T],Tam,L1,L2) :- Aux is Tam - 1,
+                          split(T,Aux,L1,L2).

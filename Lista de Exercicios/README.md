@@ -9,8 +9,8 @@
 
 *Para o segundo grupo, dentre os 30 exercícios, você deve seguir os critérios abaixo:*  
 
-*(a) são 20 exercícios com [*]*  
-*(b) são 10 exercícios com [**]*  
+*(a) são 20 exercícios com \**  
+*(b) são 10 exercícios com \*\**  
 *(c) deve haver pelo menos 2 exercícios escolhidos em cada conjunto indicado:*  
 *31- 45 .......... aritmética*  
 *46 - 49 .......... lógica*  

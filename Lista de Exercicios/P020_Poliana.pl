@@ -9,7 +9,7 @@
 %sintaxe(lista,indice,elemento_removido,lista_resultante)
 
 %caso base: em uma lista de um elemento, o elemento removido é o único elemento da lista
-remove([X],_,X,[]).
+%remove([X],_,X,[]).
 
 %no entanto, acho que esse caso base serviria pro caso de remover o ultimo elemento da lista. Como o usuário passa um indice arbitrario, eu preciso definir meu caso base levando isso em consideração. 
 
